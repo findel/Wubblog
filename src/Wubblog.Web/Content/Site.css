@@ -283,21 +283,21 @@ body {
     ALL: Orange Theme
    =================== */
 #header-container {
-  border-bottom: 20px solid #e44d26;
+  border-bottom: 20px solid #b22222;
 }
 
 #footer-container {
-  border-top: 20px solid #e44d26;
+  border-top: 20px solid #b22222;
 }
 
 #main aside {
-  border-top: 20px solid #e44d26;
+  border-top: 20px solid #b22222;
 }
 
 #header-container,
 #footer-container,
 #main aside {
-  background: #f16529;
+  background: #c92525;
 }
 
 #title {
@@ -305,13 +305,13 @@ body {
 }
 
 ::-moz-selection {
-  background: #f16529;
+  background: #c92525;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #f16529;
+  background: #c92525;
   color: #fff;
   text-shadow: none;
 }
@@ -323,7 +323,7 @@ nav a {
   display: block;
   margin-bottom: 10px;
   padding: 15px 0;
-  background: #e44d26;
+  background: #b72222;
   color: white;
   text-align: center;
   text-decoration: none;
