@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Wubblog.Web.Models
 {
@@ -17,6 +17,9 @@ namespace Wubblog.Web.Models
 	public class Entry
 	{
 		public Entry(){}
+		
+		[Key]
+		public int Id { get; set; }
 		
 		public DateTime Created { get; set; }
 		public string Title { get; set; }
