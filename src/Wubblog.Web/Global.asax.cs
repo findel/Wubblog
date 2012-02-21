@@ -11,6 +11,8 @@ namespace Wubblog.Web
 		{
 			routes.Ignore("{resource}.axd/{*pathInfo}");
 			
+			
+			
 			routes.MapRoute(
 				"Default",
 				"{controller}/{action}/{id}",
