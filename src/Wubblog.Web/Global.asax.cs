@@ -1,5 +1,4 @@
-﻿// User: phil | Date: 15/02/2012 | Time: 14:40
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
