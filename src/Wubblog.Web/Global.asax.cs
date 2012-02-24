@@ -10,8 +10,6 @@ namespace Wubblog.Web
 		{
 			routes.Ignore("{resource}.axd/{*pathInfo}");
 			
-			
-			
 			routes.MapRoute(
 				"Default",
 				"{controller}/{action}/{id}",
@@ -24,7 +22,7 @@ namespace Wubblog.Web
 		
 		protected void Application_Start()
 		{
-			RegisterRoutes(RouteTable.Routes);
+			//RegisterRoutes(RouteTable.Routes);
 		}
 	}
 }
