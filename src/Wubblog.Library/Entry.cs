@@ -70,7 +70,8 @@ namespace Wubblog.Library
 		
 		public static Entry GetByReference(string reference)
 		{
-			throw new NotImplementedException();
+			var db = Database.OpenConnection("server=localhost;port=3307;database=wubbleyew;uid=root;pwd=");
+			return db.Entries.FindByReference(reference);
 		}
 		
 		#endregion

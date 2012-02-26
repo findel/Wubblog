@@ -1,0 +1,25 @@
+﻿@model Wubblog.Library.Entry
+@{
+	Layout = "Views/Shared/_LayoutPage.cshtml";
+}
+			<article>
+				<header>
+					<h1>@Model.Title</h1>
+				</header>
+				<section>
+				@Model.Html
+				</section>
+				<section>
+					<h2>Keywords</h2>
+					<p>@Model.Keywords</p>
+				</section>
+				<footer>
+					<h3>Published</h3>
+					<p>@Model.PublishDate.ToString("dd MMM yyyy")</p>
+				</footer>
+			</article>
+			
+			<aside>
+				@Model.Description
+			</aside>
+

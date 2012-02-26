@@ -26,6 +26,12 @@ namespace Wubblog.Web.Modules
 				return View["About"];
 			};
 			
+			Get["/{reference}/"] = parameters =>
+			{
+				var entry = Entry.GetByReference(parameters.reference);
+				return View["Entry", entry];
+			};
+			
 			Get["/entry/{id}"] = parameters =>
 			{
 				var entry = Entry.GetById(parameters.id);
@@ -33,9 +39,6 @@ namespace Wubblog.Web.Modules
 				var entryData = string.Format(entryFormat, entry.EntryId, entry.Title, entry.Description, entry.Markdown, entry.Html, entry.Keywords);
 				return entryData;
 			};
-			
-			
-			
 		}
 	}
 }

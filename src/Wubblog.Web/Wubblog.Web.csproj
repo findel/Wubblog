@@ -90,6 +90,7 @@
     <None Include="Scripts\modernizr-2.5.2-respond-1.1.0.min.js" />
     <None Include="Views\Page\About.cshtml" />
     <None Include="Views\Page\Contact.cshtml" />
+    <None Include="Views\Page\Entry.cshtml" />
     <None Include="Views\Page\Index.cshtml" />
     <None Include="Views\Shared\_LayoutPage.cshtml" />
     <None Include="Views\web.config" />
