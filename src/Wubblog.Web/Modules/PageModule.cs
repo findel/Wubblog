@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Nancy;
 using Wubblog.Library;
+using Wubblog.Web.Models;
 
 namespace Wubblog.Web.Modules
 {
@@ -13,7 +15,9 @@ namespace Wubblog.Web.Modules
 		{
 			Get["/"] = parameters =>
 			{
-				return View["Index"];
+				var entries = Entry.GetLatest();
+				var model = new IndexViewModel { Entries = entries };
+				return View["Index", model];
 			};
 			
 			Get["/contact/"] = parameters =>
