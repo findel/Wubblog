@@ -20,7 +20,7 @@ CREATE TABLE `comments` (
   `email` varchar(45) NOT NULL,
   `website` varchar(45) NOT NULL,
   `twitter` varchar(45) NOT NULL,
-  `content` text NOT NULL,
+  `markdown` text NOT NULL,
   `authorised` tinyint(1) NOT NULL,
   `postedDate` datetime NOT NULL,
   `entryId` int(10) unsigned NOT NULL,
