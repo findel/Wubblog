@@ -17,6 +17,15 @@
 					<h3>Published</h3>
 					<p>@Model.PublishDate.ToString("dd MMM yyyy")</p>
 				</footer>
+				
+				@foreach(var comment in Model.Comments){
+					<section>
+						<h4>@comment.Name says...</h4>
+						<p> @comment.Twitter </p>
+						@Html.Raw(comment.Html)
+					</section>
+				}
+				
 			</article>
 			
 			<aside>

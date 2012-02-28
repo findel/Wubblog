@@ -15,7 +15,7 @@ namespace Wubblog.Web.Modules
 		{
 			Get["/"] = parameters =>
 			{
-				var entries = Entry.GetLatest();
+				var entries = Entry.All();
 				var model = new IndexViewModel { Entries = entries };
 				return View["Index", model];
 			};
@@ -32,13 +32,13 @@ namespace Wubblog.Web.Modules
 			
 			Get["/entry/{id}"] = parameters =>
 			{
-				Entry entry = Entry.GetById(parameters.id);
+				Entry entry = Entry.FindById(parameters.id);
 				return Response.AsJson(entry);
 			};
 			
 			Get["/{reference}/"] = parameters =>
 			{
-				var entry = Entry.GetByReference(parameters.reference);
+				var entry = Entry.FindByReference(parameters.reference);
 				return View["Entry", entry];
 			};
 		}

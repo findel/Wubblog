@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Simple.Data;
 using Simple.Data.Mysql;
+using System.Linq;
 
 namespace Wubblog.Library
 {
@@ -46,6 +47,8 @@ namespace Wubblog.Library
 		
 		public bool Active { get; set; }
 		
+		public IEnumerable<Comment> Comments { get; set; }
+		
 		#endregion
 		
 		#region Methods
@@ -66,19 +69,21 @@ namespace Wubblog.Library
 		
 		private static string connectionString = "server=localhost;port=3307;database=wubbleyew;uid=root;pwd=";
 		
-		public static Entry GetById(int id)
+		public static Entry FindById(int id)
 		{
 			var db = Database.OpenConnection(connectionString);
 			return db.Entries.FindByEntryId(id);
 		}
 		
-		public static Entry GetByReference(string reference)
+		public static Entry FindByReference(string reference)
 		{
 			var db = Database.OpenConnection(connectionString);
-			return db.Entries.FindByReference(reference);
+			Entry entry = db.Entries.FindByReference(reference);
+			entry.Comments = Comment.FindAllByEntry(entry);
+			return entry;
 		}
 		
-		public static IList<Entry> GetLatest()
+		public static IList<Entry> All()
 		{
 			var db = Database.OpenConnection(connectionString);
 			return db.Entries.All().ToList<Entry>();
