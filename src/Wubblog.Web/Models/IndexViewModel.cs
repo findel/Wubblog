@@ -8,6 +8,6 @@ namespace Wubblog.Web.Models
 	{
 		public IndexViewModel(){}
 		
-		public List<Entry> Entries { get; set; }
+		public IList<Entry> Entries { get; set; }
 	}
 }
