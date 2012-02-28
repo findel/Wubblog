@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Simple.Data;
 using Simple.Data.Mysql;
 
@@ -61,17 +62,24 @@ namespace Wubblog.Library
 		
 		#region Static
 		
+		private static string connectionString = "server=localhost;port=3307;database=wubbleyew;uid=root;pwd=";
+		
 		public static Entry GetById(int id)
 		{
-			//Server=myServerAddress;Port=1234;Database=myDataBase;Uid=myUsername;Pwd=myPassword;
-			var db = Database.OpenConnection("server=localhost;port=3307;database=wubbleyew;uid=root;pwd=");
+			var db = Database.OpenConnection(connectionString);
 			return db.Entries.FindByEntryId(id);
 		}
 		
 		public static Entry GetByReference(string reference)
 		{
-			var db = Database.OpenConnection("server=localhost;port=3307;database=wubbleyew;uid=root;pwd=");
+			var db = Database.OpenConnection(connectionString);
 			return db.Entries.FindByReference(reference);
+		}
+		
+		public static List<Entry> GetLatest()
+		{
+			var db = Database.OpenConnection(connectionString);
+			return (List<Entry>)db.Entries.FindAll();
 		}
 		
 		#endregion
