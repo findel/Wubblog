@@ -20,6 +20,8 @@ namespace Wubblog.Library
 		
 		public int EntryId { get; set; }
 		
+		public string Reference { get; set; }
+		
 		public string Title { get; set; }
 		
 		public string Description { get; set; }
@@ -76,10 +78,10 @@ namespace Wubblog.Library
 			return db.Entries.FindByReference(reference);
 		}
 		
-		public static List<Entry> GetLatest()
+		public static IList<Entry> GetLatest()
 		{
 			var db = Database.OpenConnection(connectionString);
-			return (List<Entry>)db.Entries.FindAll();
+			return db.Entries.All().ToList<Entry>();
 		}
 		
 		#endregion
