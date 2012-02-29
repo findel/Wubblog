@@ -7,11 +7,11 @@ INSERT INTO `entries`
 `keywords`, `createdDate`, `publishDate`, `active`)
 VALUES
 (1, 'Hello World', 'hello-world', 
-'Lorem ipsum dolor sit amet.', 
+'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero.', 
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.', 
 'hello world, test, wubblog', '2012-02-26', '2012-02-26', true),
 (2, 'Hello World 2', 'hello-world-2', 
-'Aliquam sodales urna non odio egestas tempor.', 
+'Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in.', 
 'Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.', 
 'hello world, test, wubblog', '2012-02-27', '2012-02-27', true);
 
