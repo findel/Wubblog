@@ -1,4 +1,4 @@
-﻿/* =============================================================================
+/* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
 
@@ -90,8 +90,26 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 #header-container,
 #footer-container,
-#main aside{
+#main aside
+{
 	background:#c92525;
+	a, a:visited
+	{
+		color: #ffffff;
+	}
+}
+
+a, a:visited
+{
+	color: #000000;
+}
+
+h1, h2, h3, h4
+{
+	a
+	{
+		text-decoration: none;
+	}
 }
 
 #title{ color:white; }
@@ -288,130 +306,3 @@ nav a:hover{
 
 
 
-/*
-body
-{
-	font-family: Verdana, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	background-color: #709ad1;
-}
-
-h1 
-{
-	font-size: 12pt;
-	font-weight: bold;
-	padding: 0;
-	margin-left: 20px;
-	margin-top: 5px;
-	margin-right: 20px;
-}
-
-h2
-{
-	font-size: 11pt;
-	font-weight: bold;
-	margin-top: 10px;
-}
-
-p
-{
-	margin-left: 20px;
-	font-size: 10pt;
-	margin-right: 20px;
-}
-
-a
-{
-	color: #666666;
-}
-
-a:hover
-{
-	color: #111;
-}
-
-#body li
-{
-	font-size: 10pt;
-}
-
-li
-{
-	font-size: 10pt;
-}
-
-#body li li
-{
-	font-size: 10pt;
-}
-
-#links
-{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-#title
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 20px;
-}
-
-#title h1
-{
-  font-size: 20pt;
-  color: #fff;
-}
-
-#page
-{
-	margin: auto;
-	text-align: left;
-	width: 90%;
-}
-
-#main
-{
-  clear: both;
-	padding: 10px 20px;
-	background-color: #fff
-}
-
-#menu 
-{
-	float: left;
-	margin: 0;
-	padding: 0;
-	list-style: none;
- 	position: relative;
-}
-
-#menu li 
-{
-	float: left;
-	font-size: 8pt;
-	font-weight: bold;
-	margin: 5px;
-	padding: 0;
-	list-style: none;
-}
-
-#menu a 
-{
-	float: left;
-	padding: 5px 20px 5px 20px;
-	text-decoration: none;
-	color: #111;
-	background-color: #fff;
-}
-
-#menu a:hover
-{
-	color: #fff;
-	background-color: #111;
-}
-*/

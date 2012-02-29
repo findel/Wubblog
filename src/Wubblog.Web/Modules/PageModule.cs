@@ -30,12 +30,6 @@ namespace Wubblog.Web.Modules
 				return View["About"];
 			};
 			
-			Get["/entry/{id}"] = parameters =>
-			{
-				Entry entry = Entry.FindById(parameters.id);
-				return Response.AsJson(entry);
-			};
-			
 			Get["/{reference}/"] = parameters =>
 			{
 				var entry = Entry.FindByReference(parameters.reference);

@@ -5,23 +5,30 @@
 			<article>
 				<header>
 					<h1>@Model.Title</h1>
+					<p>Published: @Model.PublishDate.ToString("dd MMM yyyy") <a href="#comments">@Model.Comments.Count Comment(s)</a></p>
 				</header>
 				<section>
 				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
+				@Html.Raw(Model.Html)
 				</section>
-				<section>
-					<h2>Keywords</h2>
-					<p>@Model.Keywords</p>
-				</section>
-				<footer>
-					<h3>Published</h3>
-					<p>@Model.PublishDate.ToString("dd MMM yyyy")</p>
-				</footer>
 				
+				<a id="comments"></a>
 				@foreach(var comment in Model.Comments){
 					<section>
-						<h4>@comment.Name says...</h4>
-						<p> @comment.Twitter </p>
+						<h4>@comment.Name (@comment.Twitter)</h4>
 						@Html.Raw(comment.Html)
 					</section>
 				}

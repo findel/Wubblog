@@ -11,9 +11,16 @@ namespace Wubblog.Library
 	/// </summary>
 	public class Entry
 	{
+		
 		#region Constructors
 		
 		public Entry() {}
+		
+		#endregion
+		
+		#region Fields
+		
+		private IList<Comment> _Comments;
 		
 		#endregion
 		
@@ -47,7 +54,13 @@ namespace Wubblog.Library
 		
 		public bool Active { get; set; }
 		
-		public IEnumerable<Comment> Comments { get; set; }
+		public IList<Comment> Comments
+		{
+			get
+			{
+				return _Comments ?? (_Comments = Comment.FindAllByEntry(this));
+			}
+		}
 		
 		#endregion
 		
@@ -78,9 +91,7 @@ namespace Wubblog.Library
 		public static Entry FindByReference(string reference)
 		{
 			var db = Database.OpenConnection(connectionString);
-			Entry entry = db.Entries.FindByReference(reference);
-			entry.Comments = Comment.FindAllByEntry(entry);
-			return entry;
+			return db.Entries.FindByReference(reference);
 		}
 		
 		public static IList<Entry> All()
