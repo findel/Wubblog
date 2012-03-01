@@ -68,7 +68,8 @@ namespace Wubblog.Library
 		
 		public void Save()
 		{
-			throw new NotImplementedException();
+			var db = Database.OpenConnection(connectionString);
+			db.Entries.Update(this);
 		}
 		
 		public void Delete()

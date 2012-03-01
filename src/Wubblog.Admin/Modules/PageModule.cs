@@ -5,9 +5,6 @@ using Wubblog.Library;
 
 namespace Wubblog.Web.Modules
 {
-	/// <summary>
-	/// Description of PagesModule.
-	/// </summary>
 	public class PageModule : NancyModule
 	{
 		public PageModule()

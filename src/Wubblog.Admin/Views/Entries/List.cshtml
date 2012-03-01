@@ -1,0 +1,12 @@
+﻿@model Wubblog.Admin.Models.EntriesViewModel
+@{
+	Layout = "Views/Shared/_LayoutPage.cshtml";
+}
+<h2>All Entries</h2>
+<ul>
+@foreach(var entry in Model.Entries)
+{
+	<li><a href="/entries/@entry.EntryId/">@entry.Title</a></li>
+}
+</ul>
+

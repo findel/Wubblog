@@ -1,0 +1,27 @@
+﻿@model Wubblog.Library.Entry
+@{
+	Layout = "Views/Shared/_LayoutPage.cshtml";
+}
+<form action="/entries/@Model.EntryId/" method="POST">
+	
+	<h2>Edit Entry: @Model.Title</h2>
+	
+	<p>
+	<label>
+	Title: <input type="text" name="title" value="@Model.Title" />
+	</label>
+	</p>
+	
+	<p>
+	<label>
+	Description: <input type="text" name="description" value="@Model.Description" />
+	</label>
+	</p>
+	
+	<p>
+	<button type="submit">Save</button>
+	</p>
+	
+</form>
+
+
