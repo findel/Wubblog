@@ -98,7 +98,10 @@ namespace Wubblog.Library
 		public static IList<Entry> All()
 		{
 			var db = Database.OpenConnection(connectionString);
-			return db.Entries.All().ToList<Entry>();
+			return db.Entries
+				.FindAllByActive(true)
+				.OrderByPublishDateDescending()
+				.ToList<Entry>();
 		}
 		
 		#endregion
