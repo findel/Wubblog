@@ -60,12 +60,9 @@ namespace Wubblog.Library
 		
 		#region Static
 		
-		private static string connectionString = "server=localhost;port=3307;database=wubbleyew;uid=root;pwd=";
-		
 		public static IList<Comment> FindAllByEntry(Entry entry)
 		{
-			var db = Database.OpenConnection(connectionString);
-			return db.Comments.FindAllByEntryId(entry.EntryId).ToList<Comment>();
+			return DbFactory.Db.Comments.FindAllByEntryId(entry.EntryId).ToList<Comment>();
 		}
 		
 		#endregion

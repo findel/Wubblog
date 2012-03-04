@@ -68,8 +68,7 @@ namespace Wubblog.Library
 		
 		public void Save()
 		{
-			var db = Database.OpenConnection(connectionString);
-			db.Entries.Update(this);
+			DbFactory.Db.Entries.Update(this);
 		}
 		
 		public void Delete()
@@ -81,24 +80,19 @@ namespace Wubblog.Library
 		
 		#region Static
 		
-		private static string connectionString = "server=localhost;port=3307;database=wubbleyew;uid=root;pwd=";
-		
 		public static Entry FindById(int id)
 		{
-			var db = Database.OpenConnection(connectionString);
-			return db.Entries.FindByEntryId(id);
+			return DbFactory.Db.Entries.FindByEntryId(id);
 		}
 		
 		public static Entry FindByReference(string reference)
 		{
-			var db = Database.OpenConnection(connectionString);
-			return db.Entries.FindByReference(reference);
+			return DbFactory.Db.Entries.FindByReference(reference);
 		}
 		
 		public static IList<Entry> All()
 		{
-			var db = Database.OpenConnection(connectionString);
-			return db.Entries
+			return DbFactory.Db.Entries
 				.FindAllByActive(true)
 				.OrderByPublishDateDescending()
 				.ToList<Entry>();

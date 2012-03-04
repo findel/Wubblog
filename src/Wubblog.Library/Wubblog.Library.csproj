@@ -59,6 +59,7 @@
     <Compile Include="Author.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Entry.cs" />
+    <Compile Include="DbFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
