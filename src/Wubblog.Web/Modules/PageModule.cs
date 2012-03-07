@@ -15,7 +15,7 @@ namespace Wubblog.Web.Modules
 		{
 			Get["/"] = parameters =>
 			{
-				var entries = Entry.All().Take(5).ToList();
+				var entries = Entry.Latest();
 				var model = new IndexViewModel { Entries = entries };
 				return View["Index", model];
 			};

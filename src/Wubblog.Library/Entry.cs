@@ -98,6 +98,15 @@ namespace Wubblog.Library
 				.ToList<Entry>();
 		}
 		
+		public static IList<Entry> Latest()
+		{
+			return DbFactory.Db.Entries
+				.FindAllByActive(true)
+				.OrderByPublishDateDescending()
+				.Take(5)
+				.ToList<Entry>();
+		}
+		
 		#endregion
 		
 	}
