@@ -27,8 +27,11 @@ namespace Wubblog.Admin.Modules
 			{
 				var entry = Entry.FindById(p.id);
 				
+				entry.Reference = Request.Form.Reference;
 				entry.Title = Request.Form.Title;
 				entry.Description = Request.Form.Description;
+				entry.Markdown = Request.Form.Markdown;
+				entry.Keywords = Request.Form.Keywords;
 				entry.Save();
 				
 				return View["Edit", entry];

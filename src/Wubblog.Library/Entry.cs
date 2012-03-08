@@ -68,7 +68,10 @@ namespace Wubblog.Library
 		
 		public void Save()
 		{
-			DbFactory.Db.Entries.Update(this);
+			if(this.EntryId == 0)
+				DbFactory.Db.Entries.Insert(this);
+			else
+				DbFactory.Db.Entries.Update(this);
 		}
 		
 		public void Delete()

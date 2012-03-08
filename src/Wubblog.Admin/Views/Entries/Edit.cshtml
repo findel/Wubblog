@@ -8,13 +8,37 @@
 	
 	<p>
 	<label>
-	Title: <input type="text" name="title" value="@Model.Title" />
+	Reference: <br /><input type="text" name="reference" value="@Model.Reference" />
 	</label>
 	</p>
 	
 	<p>
 	<label>
-	Description: <input type="text" name="description" value="@Model.Description" />
+	Title: <br /><input type="text" name="title" value="@Model.Title" />
+	</label>
+	</p>
+	
+	<p>
+	<label>
+	Description: <br />
+	<textarea name="description">
+	@Model.Description
+	</textarea>
+	</label>
+	</p>
+	
+	<p>
+	<label>
+	Content: <br />
+	<textarea name="markdown">
+	@Model.Markdown
+	</textarea>
+	</label>
+	</p>
+	
+	<p>
+	<label>
+	Keywords: <br /><input type="text" name="keywords" value="@Model.Keywords" />
 	</label>
 	</p>
 	
