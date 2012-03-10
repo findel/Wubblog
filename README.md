@@ -23,7 +23,7 @@ This will be the main (public) blog project.
 
 This will be the project used by the blog administrator(s) to edit content and so on. Administrators, or `Authors`, will be required to sign in to use this site.
 
-I've decided I will use a separate project for this because I prefer the added security by ambiguity that I feel it provides, since it can be run on a completely separate domain. For example, on my blog I plan on running this as a not too obvious sub-domain. 
+I've decided I will use a separate project for this because I prefer the added security through obscurity that I feel it provides, since it can be run on a completely separate domain. For example, on my blog I plan on running this as a not too obvious sub-domain. 
 
 ### Wubblog.Library 
 
