@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 4.2.0.8528-beta
+# SharpDevelop 4.2.0.8649-Beta 2
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Library", "Wubblog.Library\Wubblog.Library.csproj", "{82E8F430-44DA-44C4-8508-14BB0F4D4AE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Web", "Wubblog.Web\Wubblog.Web.csproj", "{088261CF-B90C-46DD-B4C3-142F4CE65CA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Admin", "Wubblog.Admin\Wubblog.Admin.csproj", "01765F5F-0C61-4FF5-AFAC-18D63476BB06"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Tests", "Wubblog.Tests\Wubblog.Tests.csproj", "{FFC934D8-9E48-434A-A7BB-D9B14A0D3B8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,5 +28,9 @@ Global
 		01765F5F-0C61-4FF5-AFAC-18D63476BB06.Debug|x86.ActiveCfg = Debug|x86
 		01765F5F-0C61-4FF5-AFAC-18D63476BB06.Release|x86.Build.0 = Release|x86
 		01765F5F-0C61-4FF5-AFAC-18D63476BB06.Release|x86.ActiveCfg = Release|x86
+		{FFC934D8-9E48-434A-A7BB-D9B14A0D3B8C}.Debug|x86.Build.0 = Debug|x86
+		{FFC934D8-9E48-434A-A7BB-D9B14A0D3B8C}.Debug|x86.ActiveCfg = Debug|x86
+		{FFC934D8-9E48-434A-A7BB-D9B14A0D3B8C}.Release|x86.Build.0 = Release|x86
+		{FFC934D8-9E48-434A-A7BB-D9B14A0D3B8C}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
