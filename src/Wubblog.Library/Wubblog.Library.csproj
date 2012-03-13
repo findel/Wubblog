@@ -60,6 +60,7 @@
     <Compile Include="Comment.cs" />
     <Compile Include="Entry.cs" />
     <Compile Include="DbFactory.cs" />
+    <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

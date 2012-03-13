@@ -8,21 +8,37 @@ namespace Wubblog.Library
 		
 		public Author() {}
 		
+		public Author(string userName, string password)
+		{
+			this.UserName = userName;
+			this.PasswordHash = PasswordHasher.CreateHash(password);
+		}
+		
 		#endregion
 		
 		#region Properties
 		
-		public int Id { get; set; }
+		public int AuthorId { get; set; }
 		
 		public string UserName { get; set; }
 		
 		public string DisplayName { get; set; }
 		
-		// public string Password { get; set; }
+		public string PasswordHash { get; set; }
 		
 		#endregion
 		
 		#region Methods
+		
+		public bool ValidatePassword(string password)
+		{
+			return PasswordHasher.ValidateHash(password, this.PasswordHash);
+		}
+		
+		public void ResetPassword(string password)
+		{
+			this.PasswordHash = PasswordHasher.CreateHash(password);
+		}
 		
 		public void Save()
 		{
