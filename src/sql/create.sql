@@ -1,5 +1,15 @@
 DROP TABLE IF EXISTS `comments`;
 DROP TABLE IF EXISTS `entries`;
+DROP TABLE IF EXISTS `authors`;
+
+
+CREATE TABLE `authors` (
+  `authorId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userName` varchar(45) NOT NULL,
+  `displayName` varchar(45) NOT NULL,
+  `passwordHash` varchar(128) NOT NULL,
+  PRIMARY KEY (`authorId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `entries` (
   `entryId` int(10) unsigned NOT NULL auto_increment,
