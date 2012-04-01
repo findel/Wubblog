@@ -42,12 +42,24 @@ namespace Wubblog.Library
 		
 		public void Save()
 		{
-			throw new NotImplementedException();
+			if(this.AuthorId == 0)
+				DbFactory.Db.Authors.Insert(this);
+			else
+				DbFactory.Db.Authors.Update(this);
 		}
 		
 		public void Delete()
 		{
 			throw new NotImplementedException();
+		}
+		
+		#endregion
+		
+		#region Static
+		
+		public static Author FindById(int id)
+		{
+			return DbFactory.Db.Authors.FindByAuthorId(id);
 		}
 		
 		#endregion

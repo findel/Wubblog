@@ -14,7 +14,10 @@ namespace Wubblog.Library
 		
 		#region Constructors
 		
-		public Entry() {}
+		public Entry()
+		{
+			this.CreatedDate = DateTime.Now;
+		}
 		
 		#endregion
 		
