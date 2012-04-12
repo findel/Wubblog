@@ -24,7 +24,7 @@ namespace Wubblog.Library
 		private static dynamic NewDb()
 		{
 			// TODO Put connection string into web.config
-			return Database.OpenConnection("server=localhost;port=3307;database=wubbleyew;uid=root;pwd=");
+			return Database.OpenConnection("server=localhost;port=3306;database=wubbleyew;uid=root;pwd=zxcvb321");
 		}
 		
 		#endregion

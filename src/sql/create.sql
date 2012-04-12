@@ -2,7 +2,6 @@ DROP TABLE IF EXISTS `comments`;
 DROP TABLE IF EXISTS `entries`;
 DROP TABLE IF EXISTS `authors`;
 
-
 CREATE TABLE `authors` (
   `authorId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `userName` varchar(45) NOT NULL,

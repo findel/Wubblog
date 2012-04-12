@@ -38,13 +38,13 @@
       <HintPath>..\packages\MySql.Data.6.5.4\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data">
-      <HintPath>..\packages\Simple.Data.Core.0.14.0.3\lib\net40\Simple.Data.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Core.0.16.0.0\lib\net40\Simple.Data.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data.Ado">
-      <HintPath>..\packages\Simple.Data.Ado.0.14.0.3\lib\net40\Simple.Data.Ado.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Ado.0.16.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data.Mysql.Mysql40">
-      <HintPath>..\packages\Simple.Data.Mysql.0.14.0.3\lib\net40\Simple.Data.Mysql.Mysql40.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Mysql.0.16.0.0\lib\net40\Simple.Data.Mysql.Mysql40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
