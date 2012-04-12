@@ -10,7 +10,6 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -46,13 +45,13 @@
       <HintPath>..\packages\Nancy.Viewengines.Razor.0.10.0\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data">
-      <HintPath>..\packages\Simple.Data.Core.0.14.0.3\lib\net40\Simple.Data.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Core.0.16.0.0\lib\net40\Simple.Data.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data.Ado">
-      <HintPath>..\packages\Simple.Data.Ado.0.14.0.3\lib\net40\Simple.Data.Ado.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Ado.0.16.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
     </Reference>
     <Reference Include="Simple.Data.Mysql.Mysql40">
-      <HintPath>..\packages\Simple.Data.Mysql.0.14.0.3\lib\net40\Simple.Data.Mysql.Mysql40.dll</HintPath>
+      <HintPath>..\packages\Simple.Data.Mysql.0.16.0.0\lib\net40\Simple.Data.Mysql.Mysql40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
