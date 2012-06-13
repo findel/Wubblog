@@ -8,7 +8,13 @@ namespace Wubblog.Library
 	{
 		#region Constructors
 		
-		public Comment() {}
+		public Comment(){}
+		
+		public Comment(Entry entry)
+		{
+			this.PostedDate = DateTime.Now;
+			this.Entry = entry;
+		}
 		
 		#endregion
 		
@@ -40,7 +46,21 @@ namespace Wubblog.Library
 		
 		public DateTime PostedDate { get; set; }
 		
-		public Entry Entry { get; set; }
+		private Entry _Entry;
+		public Entry Entry 
+		{ 
+			get
+			{
+				return _Entry ?? (_Entry = Entry.FindById(this.EntryId));
+			}
+			set
+			{
+				_Entry = value;
+				this.EntryId = value != null ? value.EntryId : 0;
+			}
+		}
+		
+		public int EntryId { get; set; }
 		
 		#endregion
 		
@@ -48,12 +68,15 @@ namespace Wubblog.Library
 		
 		public void Save()
 		{
-			throw new NotImplementedException();
+			if(this.CommentId == 0)
+				DbFactory.Db.Comments.Insert(this);
+			else
+				DbFactory.Db.Comments.Update(this);
 		}
 		
 		public void Delete()
 		{
-			throw new NotImplementedException();
+			DbFactory.Db.Comments.Delete(this);
 		}
 		
 		#endregion

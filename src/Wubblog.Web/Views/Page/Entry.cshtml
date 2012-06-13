@@ -7,22 +7,11 @@
 					<h1>@Model.Title</h1>
 					<p>Published: @Model.PublishDate.ToString("dd MMM yyyy") <a href="#comments">@Model.Comments.Count Comment(s)</a></p>
 				</header>
+				
 				<section>
+				
 				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
-				@Html.Raw(Model.Html)
+				
 				</section>
 				
 				<a id="comments"></a>
@@ -32,6 +21,48 @@
 						@Html.Raw(comment.Html)
 					</section>
 				}
+				
+				<form action="/@Model.Reference/" method="POST">
+				
+				<h2>Add a comment</h2>
+				
+				<p>
+				<label>
+				Name: <br /><input type="text" name="name" value="" />
+				</label>
+				</p>
+				
+				<p>
+				<label>
+				Comment: <br />
+				<textarea name="markdown">
+				</textarea>
+				</label>
+				</p>
+				
+				<p>
+				<label>
+				Email: <br /><input type="text" name="email" value="" />
+				</label>
+				</p>
+				
+				<p>
+				<label>
+				Website: <br /><input type="text" name="website" value="" />
+				</label>
+				</p>
+				
+				<p>
+				<label>
+				Twitter: <br /><input type="text" name="twitter" value="" />
+				</label>
+				</p>
+				
+				<p>
+				<button type="submit">Save</button>
+				</p>
+				
+				</form>
 				
 			</article>
 			
