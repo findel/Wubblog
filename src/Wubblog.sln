@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 4.2.0.8649-Beta 2
+# SharpDevelop 4.2.0.8783
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Library", "Wubblog.Library\Wubblog.Library.csproj", "{82E8F430-44DA-44C4-8508-14BB0F4D4AE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wubblog.Web", "Wubblog.Web\Wubblog.Web.csproj", "{088261CF-B90C-46DD-B4C3-142F4CE65CA5}"
