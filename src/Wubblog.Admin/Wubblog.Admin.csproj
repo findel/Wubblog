@@ -78,6 +78,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EntriesViewModel.cs" />
+    <Compile Include="Models\SignInViewModel.cs" />
     <Compile Include="Modules\EntriesModule.cs" />
     <Compile Include="Modules\PageModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
