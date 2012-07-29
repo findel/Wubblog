@@ -6,10 +6,10 @@
 				@foreach(Entry entry in Model.Entries)
 				{
 					<section>
-						<h2><a href="/@entry.Reference/">@entry.Title</a></h2>
+						<h2><a href="/entries/@entry.Reference/">@entry.Title</a></h2>
 						<p>@entry.Description</p>
 						<p>Published: @entry.PublishDate.ToString("dd MMM yyyy") Comments: @entry.Comments.Count</p>
-						<a href="/@entry.Reference/">Read more</a>
+						<a href="/entries/@entry.Reference/">Read more</a>
 					</section>
 				}
 			</article>
