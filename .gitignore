@@ -2,6 +2,7 @@
 [Bb]in/
 packages/
 .sass-cache/
+PartCover/
 
 
 *.swp
