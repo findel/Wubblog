@@ -20,11 +20,11 @@ namespace Wubblog.Library
 		
 		public int AuthorId { get; set; }
 		
-		public string UserName { get; set; }
+		public string UserName { get; private set; }
 		
 		public string DisplayName { get; set; }
 		
-		public string PasswordHash { get; set; }
+		public string PasswordHash { get; private set; }
 		
 		#endregion
 		
@@ -43,14 +43,17 @@ namespace Wubblog.Library
 		public void Save()
 		{
 			if(this.AuthorId == 0)
-				DbFactory.Db.Authors.Insert(this);
+			{
+				Author saved = DbFactory.Db.Authors.Insert(this);
+				this.AuthorId = saved.AuthorId;
+			}
 			else
 				DbFactory.Db.Authors.Update(this);
 		}
 		
 		public void Delete()
 		{
-			throw new NotImplementedException();
+			DbFactory.Db.Authors.Delete(this);
 		}
 		
 		#endregion

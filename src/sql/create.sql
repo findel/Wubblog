@@ -7,7 +7,8 @@ CREATE TABLE `authors` (
   `userName` varchar(45) NOT NULL,
   `displayName` varchar(45) NOT NULL,
   `passwordHash` varchar(128) NOT NULL,
-  PRIMARY KEY (`authorId`)
+  PRIMARY KEY (`authorId`),
+  UNIQUE KEY `userName_UNIQUE` (`userName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `entries` (

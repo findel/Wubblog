@@ -22,6 +22,8 @@ namespace Wubblog.Tests
 			Assert.AreEqual(author.UserName, saved.UserName, "UserName not saved correctly");
 			Assert.AreEqual(author.DisplayName, saved.DisplayName, "DisplayName not saved correctly");
 			Assert.AreEqual(author.PasswordHash, saved.PasswordHash, "PasswordHash not saved correctly");
+			
+			author.Delete();
 		}
 		[Test]
 		public void ValidateCorrectPassword()
