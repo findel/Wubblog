@@ -13,7 +13,7 @@ namespace Wubblog.Web.Modules
 			Get["/"] = parameters =>
 			{
 				var entries = Entry.Latest();
-				var model = new IndexViewModel { Entries = entries };
+				var model = new EntriesViewModel { Entries = entries };
 				return View["Index", model];
 			};
 			

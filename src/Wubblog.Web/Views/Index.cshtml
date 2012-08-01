@@ -1,4 +1,4 @@
-﻿@model Wubblog.Web.Models.IndexViewModel
+﻿@model Wubblog.Web.Models.EntriesViewModel
 @{
 	Layout = "Views/Shared/_LayoutPage.cshtml";
 }
@@ -13,7 +13,12 @@
 						<a href="/entries/@entry.Reference/">Read more</a>
 					</section>
 				}
+				
+				<p><a href="/entries/">All entries</a></p>
+				
 			</article>
+			
+			
 			
 			<aside>
 				<h3>Welcome</h3>

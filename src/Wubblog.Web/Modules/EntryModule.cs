@@ -1,6 +1,7 @@
 ﻿using System;
 using Nancy;
 using Wubblog.Library;
+using Wubblog.Web.Models;
 
 namespace Wubblog.Web.Modules
 {
@@ -8,6 +9,13 @@ namespace Wubblog.Web.Modules
 	{
 		public EntryModule() : base("/entries")
 		{
+			Get["/"] = parameters => 
+			{
+				var viewModel = new EntriesViewModel();
+				viewModel.Entries = Entry.All();
+				return View["Entries", viewModel];
+			};
+			
 			
 			Get["/{reference}/"] = parameters =>
 			{

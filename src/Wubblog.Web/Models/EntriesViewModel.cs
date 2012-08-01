@@ -4,9 +4,9 @@ using Wubblog.Library;
 
 namespace Wubblog.Web.Models
 {
-	public class IndexViewModel
+	public class EntriesViewModel
 	{
-		public IndexViewModel(){}
+		public EntriesViewModel(){}
 		
 		public IList<Entry> Entries { get; set; }
 	}

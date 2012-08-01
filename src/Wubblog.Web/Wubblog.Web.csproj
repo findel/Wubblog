@@ -79,7 +79,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\IndexViewModel.cs" />
+    <Compile Include="Models\EntriesViewModel.cs" />
     <Compile Include="Modules\EntryModule.cs" />
     <Compile Include="Modules\PageModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,10 +92,11 @@
     <None Include="Scripts\jquery-1.7.1.js" />
     <None Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\modernizr-2.5.2-respond-1.1.0.min.js" />
+    <None Include="Views\Entries.cshtml" />
     <None Include="Views\Entry.cshtml" />
+    <None Include="Views\Index.cshtml" />
     <None Include="Views\Page\About.cshtml" />
     <None Include="Views\Page\Contact.cshtml" />
-    <None Include="Views\Page\Index.cshtml" />
     <None Include="Views\Shared\_LayoutPage.cshtml" />
     <None Include="Views\web.config" />
     <None Include="web.config" />

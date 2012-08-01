@@ -1,0 +1,17 @@
+﻿@model Wubblog.Web.Models.EntriesViewModel
+@{
+	Layout = "Views/Shared/_LayoutPage.cshtml";
+}
+			<article>
+				@foreach(Entry entry in Model.Entries)
+				{
+					<section>
+						<h2><a href="/entries/@entry.Reference/">@entry.Title</a></h2>
+						<p>
+							By @entry.Author.DisplayName on @entry.PublishDate.ToString("dd MMM yyyy"), 
+							@entry.Comments.Count Comment(s)
+							<a href="/entries/@entry.Reference/">Read more</a>
+						</p>
+					</section>
+				}
+			</article>
