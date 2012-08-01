@@ -8,7 +8,8 @@
 					<section>
 						<h2><a href="/entries/@entry.Reference/">@entry.Title</a></h2>
 						<p>@entry.Description</p>
-						<p>Published: @entry.PublishDate.ToString("dd MMM yyyy") Comments: @entry.Comments.Count</p>
+						<p>by @entry.Author.DisplayName on @entry.PublishDate.ToString("dd MMM yyyy")</p>
+						<p>@entry.Comments.Count Comment(s)</p>
 						<a href="/entries/@entry.Reference/">Read more</a>
 					</section>
 				}

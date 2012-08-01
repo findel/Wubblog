@@ -5,7 +5,8 @@
 			<article>
 				<header>
 					<h1>@Model.Title</h1>
-					<p>Published: @Model.PublishDate.ToString("dd MMM yyyy") <a href="#comments">@Model.Comments.Count Comment(s)</a></p>
+					<p>by @Model.Author.DisplayName on @Model.PublishDate.ToString("dd MMM yyyy")</p>
+					<p><a href="#comments">@Model.Comments.Count Comment(s)</a>.</p>
 				</header>
 				
 				<section>
