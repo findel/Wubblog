@@ -11,6 +11,7 @@ namespace Wubblog.Tests
 		public void CreateEntry()
 		{
 			var entry = new Entry();
+			entry.Author = Author.FindById(1);
 			entry.Title = "My Test Entry";
 			entry.Description = 
 				"This is a test entry that has been created using the `Wubblog.Tests` project. " +

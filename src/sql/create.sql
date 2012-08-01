@@ -12,7 +12,7 @@ CREATE TABLE `authors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `entries` (
-  `entryId` int(10) unsigned NOT NULL auto_increment,
+  `entryId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `reference` varchar(255) NOT NULL,
   `description` text NOT NULL,
@@ -21,7 +21,10 @@ CREATE TABLE `entries` (
   `createdDate` datetime NOT NULL,
   `publishDate` datetime NOT NULL,
   `active` tinyint(1) NOT NULL,
-  PRIMARY KEY  USING BTREE (`entryId`)
+  `authorId` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`entryId`) USING BTREE,
+  KEY `entries_authors` (`authorId`),
+  CONSTRAINT `entries_authors` FOREIGN KEY (`authorId`) REFERENCES `authors` (`authorId`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `comments` (

@@ -57,6 +57,24 @@ namespace Wubblog.Library
 		
 		public bool Active { get; set; }
 		
+		private Author _Author;
+		public Author Author
+		{
+			get
+			{
+				return _Author ?? (_Author = Author.FindById(this.AuthorId));
+			}
+			set
+			{
+				_Author = value;
+				this.AuthorId = value != null ? value.AuthorId : 0;
+			}
+		}
+		
+		public int AuthorId { get; set; }
+		
+		
+		
 		public IList<Comment> Comments
 		{
 			get
