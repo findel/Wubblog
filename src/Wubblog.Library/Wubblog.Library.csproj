@@ -47,9 +47,11 @@
       <HintPath>..\packages\Simple.Data.Mysql.0.16.2.1\lib\net40\Simple.Data.Mysql.Mysql40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -60,11 +62,21 @@
     <Compile Include="Comment.cs" />
     <Compile Include="Entry.cs" />
     <Compile Include="DbFactory.cs" />
+    <Compile Include="Mail\Message.cs" />
+    <Compile Include="Mail\MessageSettings.cs" />
+    <Compile Include="Mail\MessageTemplates.cs" />
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mail\Templates\HtmlStructure.html" />
+    <EmbeddedResource Include="Mail\Templates\ErrorReport.html" />
+    <EmbeddedResource Include="Mail\Templates\ErrorReport.txt" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mail" />
+    <Folder Include="Mail\Templates" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
