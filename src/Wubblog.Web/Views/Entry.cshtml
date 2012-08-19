@@ -23,46 +23,36 @@
 					</section>
 				}
 				
-				<form action="/@Model.Reference/" method="POST">
+				<form action="/entries/@Model.Reference/" method="POST">
 				
-				<h2>Add a comment</h2>
-				
-				<p>
-				<label>
-				Name: <br /><input type="text" name="name" value="" />
-				</label>
-				</p>
-				
-				<p>
-				<label>
-				Comment: <br />
-				<textarea name="markdown">
-				</textarea>
-				</label>
-				</p>
-				
-				<p>
-				<label>
-				Email: <br /><input type="text" name="email" value="" />
-				</label>
-				</p>
-				
-				<p>
-				<label>
-				Website: <br /><input type="text" name="website" value="" />
-				</label>
-				</p>
-				
-				<p>
-				<label>
-				Twitter: <br /><input type="text" name="twitter" value="" />
-				</label>
-				</p>
-				
-				<p>
-				<button type="submit">Save</button>
-				</p>
-				
+					<fieldset>
+						
+						<legend>Add a comment</legend>
+						
+						<label>
+							Name: <input type="text" name="name" value="" />
+						</label>
+						
+						<label>
+							Comment: <textarea name="markdown"></textarea>
+						</label>
+						
+						<label>
+							Email: <input type="text" name="email" value="" />
+						</label>
+						
+						<label>
+							Website: <input type="text" name="website" value="" />
+						</label>
+					
+						<label>
+							Twitter: <input type="text" name="twitter" value="" />
+						</label>
+						
+						<button type="submit">Save</button>
+						
+					</fieldset>
+					
 				</form>
 				
 			</article>
