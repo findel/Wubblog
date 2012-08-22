@@ -104,22 +104,26 @@ nav a:hover{
 fieldset
 {
 	background-color: #ececec;
-	padding: 0px 10px;
 	margin-bottom: 1em;
 	
 	legend
 	{
 	  font-weight: 600;
+	  width: 90%;
+	  margin: 0 auto;
 	}
 
 	label
 	{
 	  display: block;
-	  margin: 0 5% 0.5em 5%;
+	  width: 90%;
+	  margin: 0 auto 0.5em auto;
 
 	  input, textarea
 	  {
 	    display: block;
+	    border: none;
+	    @include box-sizing(border-box);   
 	    width: 100%;
 	  }
 
@@ -131,9 +135,10 @@ fieldset
 
 	button
 	{
+	  display: block;
 	  padding: 0;
 	  width: 90%;
-	  margin: 0 5% 0.5em 5%;
+	  margin: 0 auto 0.5em auto;
 	}
 }
 
